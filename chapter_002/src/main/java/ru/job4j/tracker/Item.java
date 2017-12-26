@@ -1,5 +1,11 @@
 package ru.job4j.tracker;
 
+/**
+ * Class Item хранящий параметры заявок.
+ * @author Shaev Andrey.
+ * @version 1.01.
+ * @since 13.12.17
+*/
 public class Item {
 	
 	private String id;
@@ -9,7 +15,11 @@ public class Item {
 	private String comments;
 	
 	public Item() {
-		
+	}
+	
+	public Item(String name, String desc) {
+		this.name = name;
+		this.desc = desc;
 	}
 	
 	public Item(String name, String desc, long created) {
@@ -30,7 +40,7 @@ public class Item {
 		this.desc = desc;
 	}
 	
-	public void setId(long created) {
+	public void setCreated(long created) {
 		this.created = created;
 	}
 	
