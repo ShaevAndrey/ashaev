@@ -23,11 +23,11 @@ public class StartUINew {
 	    	MenuTracker menu = new MenuTracker(this.input, tracker);
 	    	menu.fillActions();
 	    	menu.show();
-	    	menu.select(Integer.valueOf(this.input.ask("Select:")));
+	    	menu.select(this.input.ask("Select:", menu.getRange()));
 	    } while (!"y".equals(this.input.ask("Exit (y)")));
 	}
 	
-	 public static void main(String[] args) {
-	        new StartUINew(new ConsoleInput()).init();
+	public static void main(String[] args) {
+	        new StartUINew(new ValidateInput()).init();
 		} 
 }

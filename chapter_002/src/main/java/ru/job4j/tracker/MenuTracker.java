@@ -12,6 +12,9 @@ public class MenuTracker {
 	private Tracker tracker;
 	private Input input;
 	
+	public int getRange(){
+		return this.action.length;
+	}
 	public MenuTracker(Input input, Tracker tracker) {
 		this.input = input;
 		this.tracker = tracker;

@@ -16,4 +16,17 @@ public class ConsoleInput implements Input {
 		System.out.println(quation);
 		return scanner.nextLine();
 	}
+	
+	public int ask(String quation, int range) {
+		int key = Integer.valueOf(scanner.nextLine());
+		boolean exist = false;
+		if(key >= 0 && key < range) {
+			exist = true;
+		}
+		if(exist) {
+			return key;
+		} else {
+			throw new MenuOutException("OUT of range");
+		}
+	}
 }
